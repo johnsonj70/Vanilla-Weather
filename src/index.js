@@ -1,22 +1,26 @@
 function search(event) {
 	event.preventDefault();
-	let searchInput = document.querySelector('#search-form-input');
-	let cityElement = document.querySelector('#city');
-	cityElement.innerHTML = searchInput.value;
-	searchForCity(searchInput.value);
+	let searchInputElement = document.querySelector('#search-form-input');
+	searchForCity(searchInputElement.value);
 }
 
 function searchForCity(city) {
 	const apiKey = '00a6bfb9b6053b4664t55oaa8c181e51';
-	const url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-	axios.get(url).then(refreshWeather);
+	const url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
+	axios.get(url).then(displayTemperature);
 }
 
-function refreshWeather(response) {
-	let temperatureElement = document.querySelector('#city-temp');
+function displayTemperature(response) {
 	let cityElement = document.querySelector('#city');
 	cityElement.innerHTML = response.data.city;
-	temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+
+	let temperatureElement = document.querySelector('#city-temp');
+	temperatureElement.innerHTML = fahrenheitToCelsius(
+		Math.floor(response.data.temperature.current)
+	);
+	temperatureElement.innerHTML = Math.round(
+		fahrenheitToCelsius(response.data.temperature.current)
+	);
 }
 
 function celsiusToFahrenheit(celsius) {
@@ -29,5 +33,36 @@ function fahrenheitToCelsius(fahrenheit) {
 	return celsius;
 }
 
-let searchFormElement = document.querySelector('#search-form');
-searchFormElement.addEventListener('submit', search);
+function formatDayAndTime(date) {
+	let day = date.getDay();
+	let hours = date.getHours();
+	let minutes = date.getMinutes();
+
+	if (minutes < 10) {
+		minutes = `0${minutes}`;
+	}
+
+	if (hours < 10) {
+		hours = `0${newHour}`;
+	}
+
+	let days = [
+		'Sunday',
+		'Monday',
+		'Tuesday',
+		'Wednesday',
+		'Thursday',
+		'Friday',
+		'Saturday',
+	];
+
+	let formattedDay = days[day];
+	return `${formattedDay}, ${hours}:${minutes}`;
+}
+
+let searchForm = document.querySelector('#search-form');
+searchForm.addEventListener('submit', search);
+
+let currentDateElement = document.querySelector('#day-and-time');
+let currentDate = new Date();
+currentDateElement.innerHTML = formatDayAndTime(currentDate);
