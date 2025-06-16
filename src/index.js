@@ -3,6 +3,7 @@ function search(event) {
 	let searchInputElement = document.querySelector('#search-form-input');
 	searchForCity(searchInputElement.value);
 }
+console.log(response.data.condition.description);
 
 function searchForCity(city) {
 	const apiKey = '00a6bfb9b6053b4664t55oaa8c181e51';
