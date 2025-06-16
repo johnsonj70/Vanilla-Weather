@@ -59,14 +59,15 @@ body {
 
 .weather-app-temperature {
 	font-size: 88px;
-	margin-left: 10px;
+	margin-left: 5px;
 	font-weight: bold;
-	line-height: 88px;
+	line-height: 100px;
 }
 
 .weather-app-icon {
 	font-size: 44px;
-	height: 88px;
+	height: 100px;
+	margin-right: 0px;
 }
 
 .weather-app-unit {
