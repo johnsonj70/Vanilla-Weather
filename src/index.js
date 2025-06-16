@@ -14,8 +14,6 @@ function displayTemperature(response) {
 	let cityElement = document.querySelector('#city');
 	cityElement.innerHTML = response.data.city;
 
-	console.log(response.data.condition.description);
-
 	let temperatureElement = document.querySelector('#city-temp');
 	temperatureElement.innerHTML = fahrenheitToCelsius(
 		Math.floor(response.data.temperature.current)
@@ -30,8 +28,11 @@ function displayTemperature(response) {
 	humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
 
 	let windSpeedElement = document.querySelector('#wind-speed');
-	windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+	windSpeedElement.innerHTML = `${response.data.wind.speed} km/h`;
 	date = new Date(response.data.time * 1000);
+
+	let iconElement = document.querySelector('#icon');
+	iconElement.innerHTML = `<img src="${response.data.condition.icon_url}", class="weather-app-icon" />`;
 	formatDayAndTime(date);
 }
 
@@ -69,7 +70,7 @@ function formatDayAndTime(date) {
 	}
 
 	let timeElement = document.querySelector('#time');
-	timeElement.innerHTML = `${day}, ${hour}:${minutes}`;
+	timeElement.innerHTML = `${day}, ${hour}:${minutes}:`;
 	return timeElement;
 }
 
