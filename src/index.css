@@ -5,7 +5,7 @@ body {
 
 .weather-app {
 	background: white;
-	max-width: 600px;
+	max-width: 700px;
 	margin: 45px auto;
 	box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
 	border-radius: 16px;
@@ -17,23 +17,31 @@ body {
 	border: none;
 	border-radius: 6px;
 	width: 80%;
+	font-family: Geologica;
 	font-size: 16px;
 	padding: 15px 20px;
 }
 
+.search-form-input::placeholder {
+	color: #5900b3;
+	margin-left: 40px;
+}
+
 .search-form-button {
-	background: #885df1;
+	background: #5900b3;
 	padding: 15px 30px;
 	border: none;
-	font-size: 16px;
+	font-family: Geologica;
+	font-size: 15px;
 	margin-left: 5px;
 	border-radius: 6px;
 	color: white;
 }
 
 .weather-app-city {
-	margin: 0;
+	margin-left: 26px;
 	font-size: 38px;
+	font-weight: 400;
 	line-height: 48px;
 }
 
@@ -43,10 +51,12 @@ body {
 }
 
 .weather-app-details {
+	font-family: Geologica;
 	font-size: 16px;
 	line-height: 24px;
-	color: rgba(39, 33, 66, 0.4);
+	color: #5900b3;
 	font-weight: 400;
+	margin-left: 26px;
 }
 
 .weather-app-details strong {
@@ -58,8 +68,11 @@ body {
 }
 
 .weather-app-temperature {
+	font-family: Geologica;
+	color: #5900b3;
 	font-size: 88px;
 	margin-left: 5px;
+	margin-top: 15px;
 	font-weight: bold;
 	line-height: 100px;
 }
@@ -71,12 +84,61 @@ body {
 }
 
 .weather-app-unit {
-	margin-top: 6px;
+	font-family: Geologica;
+	color: #5900b3;
+	margin-top: 15px;
+	margin-right: 30px;
 	font-size: 28px;
 }
 
+.weather-outlook {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	margin-top: 30px 0;
+	border-bottom: 1px solid #f9f7fe;
+	padding-bottom: 50px;
+}
+
+.daily-temperatures {
+	text-align: center;
+	color: #f65282;
+	display: flex;
+	justify-content: space-around;
+	justify-content: center;
+}
+
+.daily-temperature-min {
+	font-family: Geologica;
+	padding: 10px;
+}
+
+.daily-temperature-max {
+	font-family: Geologica;
+	padding: 10px;
+}
+
+.forecast-weekday {
+	font-family: Geologica;
+	font-weight: 500;
+	color: #5900b3;
+}
+
+h1 {
+	color: #5900b3;
+	font-family: Geologica;
+	margin-left: 30px;
+}
+
+h2 {
+	color: #5900b3;
+	font-family: Geologica;
+	font-weight: 500;
+	text-align: center;
+}
+
 a {
-	color: #885df1;
+	color: #5900b3;
 }
 
 header {
@@ -88,6 +150,7 @@ footer {
 	border-top: 1px solid #f9f7fe;
 	padding: 30px 0 0 0;
 	text-align: center;
+	font-family: Geologica;
 	font-size: 13px;
 	font-weight: 400;
 	color: rgba(0, 0, 0, 0.6);
