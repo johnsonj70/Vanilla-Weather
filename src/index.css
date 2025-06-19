@@ -55,12 +55,13 @@ body {
 	font-size: 16px;
 	line-height: 24px;
 	color: #5900b3;
-	font-weight: 400;
+	font-weight: bold;
 	margin-left: 26px;
 }
 
-.weather-app-details strong {
-	color: #f65282;
+.weather-app-details span {
+	color: #a64dff;
+	font-weight: 200;
 }
 
 .weather-app-temp-container {
@@ -102,7 +103,6 @@ body {
 
 .daily-temperatures {
 	text-align: center;
-	color: #f65282;
 	display: flex;
 	justify-content: space-around;
 	justify-content: center;
@@ -110,11 +110,13 @@ body {
 
 .daily-temperature-min {
 	font-family: Geologica;
+	color: #a64dff;
 	padding: 10px;
 }
 
 .daily-temperature-max {
 	font-family: Geologica;
+	color: #5900b3;
 	padding: 10px;
 }
 
@@ -139,6 +141,7 @@ h2 {
 
 a {
 	color: #5900b3;
+	font-weight: 500;
 }
 
 header {
@@ -152,8 +155,8 @@ footer {
 	text-align: center;
 	font-family: Geologica;
 	font-size: 13px;
-	font-weight: 400;
-	color: rgba(0, 0, 0, 0.6);
+	font-weight: 200;
+	color: #a64dff;
 }
 
 main {
