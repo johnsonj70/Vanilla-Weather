@@ -13,6 +13,7 @@ function searchForCity(city) {
 function displayTemperature(response) {
 	let cityElement = document.querySelector('#city');
 	cityElement.innerHTML = response.data.city;
+	cityElement.innerHTML = cityElement.innerHTML.toUpperCase();
 
 	let temperatureElement = document.querySelector('#city-temp');
 	temperatureElement.innerHTML = fahrenheitToCelsius(
