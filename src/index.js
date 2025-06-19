@@ -24,12 +24,13 @@ function displayTemperature(response) {
 	);
 	let descriptionElement = document.querySelector('#description');
 	descriptionElement.innerHTML = response.data.condition.description;
+	descriptionElement.innerHTML = descriptionElement.innerHTML.toUpperCase();
 
 	let humidityElement = document.querySelector('#humidity');
 	humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
 
 	let windSpeedElement = document.querySelector('#wind-speed');
-	windSpeedElement.innerHTML = `${response.data.wind.speed} km/h`;
+	windSpeedElement.innerHTML = `${response.data.wind.speed} KM/H`;
 	date = new Date(response.data.time * 1000);
 
 	let iconElement = document.querySelector('#icon');
@@ -72,6 +73,7 @@ function formatDayAndTime(date) {
 
 	let timeElement = document.querySelector('#time');
 	timeElement.innerHTML = `${day}, ${hour}:${minutes}:`;
+	timeElement.innerHTML = timeElement.innerHTML.toUpperCase();
 	return timeElement;
 }
 
