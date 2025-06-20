@@ -50,13 +50,63 @@ body {
 	justify-content: space-between;
 }
 
-.weather-app-details {
+.day-and-time {
 	font-family: Geologica;
 	font-size: 16px;
+	font-weight: bold;
 	line-height: 24px;
 	color: #5900b3;
-	font-weight: bold;
 	margin-left: 26px;
+}
+
+.humidity {
+	font-family: Geologica;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 24px;
+	color: #5900b3;
+	margin-left: 26px;
+}
+
+.humidity-value {
+	font-family: Geologica;
+	font-size: 14px;
+	font-weight: 200;
+	line-height: 24px;
+	color: #a64dff;
+}
+.wind-speed {
+	font-family: Geologica;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 24px;
+	color: #5900b3;
+	margin-left: 26px;
+}
+
+.wind-speed-value {
+	font-family: Geologica;
+	font-size: 14px;
+	font-weight: 200;
+	line-height: 24px;
+	color: #a64dff;
+}
+
+.description {
+	font-family: Geologica;
+	font-size: 14px;
+	font-weight: 200;
+	line-height: 24px;
+	color: #a64dff;
+}
+
+.conditions {
+	font-family: Geologica;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 24px;
+	margin-left: 26px;
+	color: #5900b3;
 }
 
 .weather-app-details span {
@@ -108,8 +158,14 @@ body {
 	justify-content: center;
 }
 
+.day-and-time {
+	font-weight: 200;
+	font-size: 28px;
+}
+
 .daily-temperature-min {
 	font-family: Geologica;
+	font-weight: 200;
 	color: #a64dff;
 	padding: 10px;
 }
