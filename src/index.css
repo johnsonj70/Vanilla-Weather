@@ -1,6 +1,5 @@
 body {
 	background-color: #f9f7fe;
-	font-family: 'Roboto', sans-serif;
 }
 
 .weather-app {
@@ -123,14 +122,14 @@ body {
 	color: #5900b3;
 	font-size: 88px;
 	margin-left: 5px;
-	margin-top: 15px;
+
 	font-weight: bold;
 	line-height: 100px;
 }
 
 .weather-app-icon {
-	font-size: 44px;
-	height: 100px;
+	height: 88px;
+	width: 88px;
 	margin-right: 0px;
 }
 
@@ -151,6 +150,11 @@ body {
 	padding-bottom: 50px;
 }
 
+.weather-outlook img {
+	height: 88px;
+	width: 88px;
+}
+
 .daily-temperatures {
 	text-align: center;
 	display: flex;
@@ -167,12 +171,14 @@ body {
 	font-family: Geologica;
 	font-weight: 200;
 	color: #a64dff;
+	display: flex;
 	padding: 10px;
 }
 
 .daily-temperature-max {
 	font-family: Geologica;
 	color: #5900b3;
+	display: flex;
 	padding: 10px;
 }
 
