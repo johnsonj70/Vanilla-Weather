@@ -72,7 +72,7 @@ function formatDayAndTime(date) {
 	}
 
 	let timeElement = document.querySelector('#time');
-	timeElement.innerHTML = `${day}, ${hour}:${minutes}:`;
+	timeElement.innerHTML = `${day}, ${hour}:${minutes}`;
 	timeElement.innerHTML = timeElement.innerHTML.toUpperCase();
 	return timeElement;
 }
