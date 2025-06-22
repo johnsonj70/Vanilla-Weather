@@ -34,16 +34,16 @@
 			<main>
 				<div class="weather-app-data">
 					<div>
-						<h1 class="weather-app-city" id="city">JAMAICA</h1>
-						<p>
-							<span class="day-and-time" id="time">TUESDAY, 14:00</span><br />
-							<span class="conditions" id="time">CONDITIONS: </span>
-							<span class="description" id="description"> BROKEN CLOUDS</span>
+						<h1 class="weather-app-city" id="city"></h1>
+						<p class="weather_app-details">
+							<span class="day-and-time" id="time"></span><br />
+							<span class="conditions" id="conditions">CONDITIONS: </span>
+							<span class="description" id="description"></span>
 							<br />
 							<span class="humidity">HUMIDITY: </span>
-							<span class="humidity-value" id="humidity"> 84%</span><br />
+							<span class="humidity-value" id="humidity"></span><br />
 							<span class="wind-speed">WIND SPEED: </span>
-							<span class="wind-speed-value" id="wind-speed"> 15 KM/H</span>
+							<span class="wind-speed-value" id="wind-speed"></span>
 						</p>
 					</div>
 					<div class="weather-app-temp-container">
@@ -59,68 +59,7 @@
 				</div>
 				<br />
 				<br />
-				<div class="weather-outlook" id="forecast">
-					<div class="daily-forecast">
-						<div class="forecast-weekday">FRI</div>
-						<div class="forecast-icon">
-							<img
-								src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
-							/>
-						</div>
-						<div class="daily-temperatures">
-							<div class="daily-temperature-max"><strong>25° </strong></div>
-							<div class="daily-temperature-min">19°</div>
-						</div>
-					</div>
-					<div class="daily-forecast">
-						<div class="forecast-weekday">SAT</div>
-						<div class="forecast-icon">
-							<img
-								src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
-							/>
-						</div>
-						<div class="daily-temperatures">
-							<div class="daily-temperature-max"><strong>26° </strong></div>
-							<div class="daily-temperature-min">18°</div>
-						</div>
-					</div>
-					<div class="daily-forecast">
-						<div class="forecast-weekday">SUN</div>
-						<div class="forecast-icon">
-							<img
-								src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-							/>
-						</div>
-						<div class="daily-temperatures">
-							<div class="daily-temperature-max"><strong>29° </strong></div>
-							<div class="daily-temperature-min">22°</div>
-						</div>
-					</div>
-					<div class="daily-forecast">
-						<div class="forecast-weekday">MON</div>
-						<div class="forecast-icon">
-							<img
-								src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-							/>
-						</div>
-						<div class="daily-temperatures">
-							<div class="daily-temperature-max"><strong>31° </strong></div>
-							<div class="daily-temperature-min">24°</div>
-						</div>
-					</div>
-					<div class="daily-forecast">
-						<div class="forecast-weekday">TUE</div>
-						<div class="forecast-icon">
-							<img
-								src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-							/>
-						</div>
-						<div class="daily-temperatures">
-							<div class="daily-temperature-max"><strong>31° </strong></div>
-							<div class="daily-temperature-min">23°</div>
-						</div>
-					</div>
-				</div>
+				<div class="weather-outlook" id="weather-forecast"></div>
 			</main>
 			<footer>
 				Coded by
