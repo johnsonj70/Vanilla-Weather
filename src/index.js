@@ -75,6 +75,24 @@ function formatDayAndTime(date) {
 	];
 	let day = days[date.getDay()];
 
+	let months = [
+		'January',
+		'February',
+		'March',
+		'April',
+		'May',
+		'June',
+		'July',
+		'August',
+		'September',
+		'October',
+		'November',
+		'December',
+	];
+	let month = months[date.getMonth()];
+
+	let dayOfMonth = date.getDate();
+
 	if (minutes < 10) {
 		minutes = `0${minutes}`;
 	}
@@ -83,7 +101,7 @@ function formatDayAndTime(date) {
 		hour = `0${hour}`;
 	}
 
-	return `${day}, ${hour}:${minutes}`;
+	return `${day} ${dayOfMonth} ${month}, ${hour}:${minutes}`;
 }
 
 function getForecast(city) {
