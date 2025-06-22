@@ -66,7 +66,7 @@
 .humidity-value {
 	font-family: Geologica;
 	font-size: 14px;
-	font-weight: 200;
+	font-weight: 300;
 	line-height: 24px;
 	color: #a64dff;
 }
@@ -82,7 +82,7 @@
 .wind-speed-value {
 	font-family: Geologica;
 	font-size: 14px;
-	font-weight: 200;
+	font-weight: 300;
 	line-height: 24px;
 	color: #a64dff;
 }
@@ -90,7 +90,7 @@
 .description {
 	font-family: Geologica;
 	font-size: 14px;
-	font-weight: 200;
+	font-weight: 300;
 	line-height: 24px;
 	color: #a64dff;
 }
