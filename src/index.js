@@ -32,7 +32,8 @@ function displayTemperature(response) {
 	descriptionElement.innerHTML = descriptionElement.innerHTML.toUpperCase();
 
 	humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-	windSpeedElement.innerHTML = `${response.data.wind.speed} KM/H`;
+	windSpeedElement.innerHTML =
+		Math.round(kmhToMph(`${response.data.wind.speed}`)) + ` M/PH`;
 	date = new Date(response.data.time * 1000);
 	timeElement.innerHTML = formatDayAndTime(date).toUpperCase();
 	iconElement.innerHTML = `<img src="${response.data.condition.icon_url}", class="weather-app-icon" />`;
@@ -47,6 +48,16 @@ function celsiusToFahrenheit(celsius) {
 function fahrenheitToCelsius(fahrenheit) {
 	const celsius = ((fahrenheit - 32) * 5) / 9;
 	return celsius;
+}
+
+function kmhToMph(kmh) {
+	// 1 kilometer = 0.621371 miles
+	return kmh * 0.621371;
+}
+
+function mphTokmh(mph) {
+	// 1 mile = 1.600934 kilometres
+	return mph * 1.60934;
 }
 
 function formatDayAndTime(date) {
