@@ -37,7 +37,7 @@
 	margin-left: 26px;
 	font-size: 38px;
 	font-weight: 400;
-	line-height: 48px;
+	line-height: 40px;
 }
 
 .weather-app-data {
@@ -64,7 +64,7 @@
 
 .humidity-value {
 	font-family: Geologica;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 300;
 	line-height: 24px;
 	color: #a64dff;
@@ -88,7 +88,7 @@
 
 .description {
 	font-family: Geologica;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 300;
 	line-height: 24px;
 	color: #a64dff;
@@ -105,6 +105,7 @@
 
 .weather-app-temp-container {
 	display: flex;
+	line-height: 40px;
 }
 
 .weather-app-temperature {
@@ -133,6 +134,7 @@
 
 .weather-outlook {
 	display: flex;
+	width: 600px;
 	justify-content: space-around;
 	text-align: center;
 	margin-top: 30px 0;
