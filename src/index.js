@@ -126,7 +126,7 @@ function displayForecast(response) {
 				forecastHTML +
 				`
 					<div class="daily-forecast">
-						<div class="forecast-weekday">${formatDay(day.time)}</div>
+						<div class="forecast-weekday">${formatDay(day.time).toUpperCase()}</div>
 						<div class="forecast-icon">
 							<img
 								src="${day.condition.icon_url}" class="forecast-icon"
