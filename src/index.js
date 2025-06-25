@@ -91,7 +91,6 @@ function formatDayAndTime(date) {
 	];
 	let month = months[date.getMonth()];
 	let dayOfMonth = date.getDate();
-	let year = date.getFullYear();
 
 	if (minutes < 10) {
 		minutes = `0${minutes}`;
@@ -101,7 +100,7 @@ function formatDayAndTime(date) {
 		hour = `0${hour}`;
 	}
 
-	return `${day} ${dayOfMonth} ${month} ${year}, ${hour}:${minutes}`;
+	return `${day} ${dayOfMonth} ${month}, ${hour}:${minutes}`;
 }
 
 function getForecast(city) {
